@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: run a custom script
-      - run: echo repo name: ${{ github.repository }}
+        run: echo repo name: ${{ github.repository }}
 
       - name: Run a one-line script
         run: echo Hello, world!
