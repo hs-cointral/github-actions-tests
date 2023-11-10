@@ -1,0 +1,23 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: run a custom script
+        run: echo repo name ${{ github.repository }}
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
